@@ -77,7 +77,7 @@
 		"`Inventario`.`Modelo`" => "Comp. Modelo",
 		"`Inventario`.`Serie`" => "Num. Serie",
 		"`Inventario`.`Hedset`" => "Headset",
-		"`Inventario`.`Monitor`" => "Monitor",
+		"`Inventario`.`Monitor`" => "Monitor Externo",
 		"`Inventario`.`campo1`" => "Campo 1",
 		"`Inventario`.`campo2`" => "Campo 2",
 		"`Inventario`.`NombreComp`" => "Nombre Comp.",
@@ -137,7 +137,7 @@
 	$x->DefaultSortDirection = 'asc';
 
 	$x->ColWidth   = array(  150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150);
-	$x->ColCaption = array("Empleado", "Comp. Marca", "Comp. Modelo", "Num. Serie", "Headset", "Monitor", "Campo 1", "Campo 2", "Nombre Comp.", "Antivirus", "Teamviewer ID", "Notas");
+	$x->ColCaption = array("Empleado", "Comp. Marca", "Comp. Modelo", "Num. Serie", "Headset", "Monitor Externo", "Campo 1", "Campo 2", "Nombre Comp.", "Antivirus", "Teamviewer ID", "Notas");
 	$x->ColFieldName = array('Empleado', 'Marca', 'Modelo', 'Serie', 'Hedset', 'Monitor', 'campo1', 'campo2', 'NombreComp', 'Antivirus', 'TeamviewerID', 'Notas');
 	$x->ColNumber  = array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 

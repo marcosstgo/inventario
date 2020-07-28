@@ -79,7 +79,7 @@
 			/* hide current table in homepage? */
 			$tChkHL = array_search($tn, array());
 			/* allow homepage 'add new' for current table? */
-			$tChkAHAN = array_search($tn, array());
+			$tChkAHAN = array_search($tn, array('Inventario'));
 
 			/* homepageShowCount for current table? */
 			$count_badge = '';
