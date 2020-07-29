@@ -27,14 +27,15 @@
 		"`Computadora`.`Marca`" => "Marca",
 		"`Computadora`.`Modelo`" => "Modelo",
 		"`Computadora`.`Serie`" => "Serie",
-		"`Computadora`.`Hedset`" => "Hedset",
+		"`Computadora`.`Headset`" => "Headset",
 		"`Computadora`.`Monitor`" => "Monitor",
-		"`Computadora`.`campo1`" => "campo1",
-		"`Computadora`.`campo2`" => "campo2",
+		"`Computadora`.`informacion1`" => "informacion1",
+		"`Computadora`.`informacion2`" => "informacion2",
 		"`Computadora`.`NombreComp`" => "NombreComp",
 		"`Computadora`.`Antivirus`" => "Antivirus",
 		"`Computadora`.`TeamviewerID`" => "TeamviewerID",
 		"`Computadora`.`Notas`" => "Notas",
+		"`Computadora`.`actualizado`" => "actualizado",
 	);
 	// mapping incoming sort by requests to actual query fields
 	$x->SortFields = array(
@@ -49,8 +50,9 @@
 		9 => 9,
 		10 => 10,
 		11 => 11,
-		12 => '`Computadora`.`TeamviewerID`',
+		12 => 12,
 		13 => 13,
+		14 => 14,
 	);
 
 	// Fields that can be displayed in the csv file
@@ -60,14 +62,15 @@
 		"`Computadora`.`Marca`" => "Marca",
 		"`Computadora`.`Modelo`" => "Modelo",
 		"`Computadora`.`Serie`" => "Serie",
-		"`Computadora`.`Hedset`" => "Hedset",
+		"`Computadora`.`Headset`" => "Headset",
 		"`Computadora`.`Monitor`" => "Monitor",
-		"`Computadora`.`campo1`" => "campo1",
-		"`Computadora`.`campo2`" => "campo2",
+		"`Computadora`.`informacion1`" => "informacion1",
+		"`Computadora`.`informacion2`" => "informacion2",
 		"`Computadora`.`NombreComp`" => "NombreComp",
 		"`Computadora`.`Antivirus`" => "Antivirus",
 		"`Computadora`.`TeamviewerID`" => "TeamviewerID",
 		"`Computadora`.`Notas`" => "Notas",
+		"`Computadora`.`actualizado`" => "actualizado",
 	);
 	// Fields that can be filtered
 	$x->QueryFieldsFilters = array(
@@ -76,14 +79,15 @@
 		"`Computadora`.`Marca`" => "Marca Comp.",
 		"`Computadora`.`Modelo`" => "Comp. Modelo",
 		"`Computadora`.`Serie`" => "# Serie",
-		"`Computadora`.`Hedset`" => "Headset",
+		"`Computadora`.`Headset`" => "Headset",
 		"`Computadora`.`Monitor`" => "Monitor Externo",
-		"`Computadora`.`campo1`" => "Campo 1",
-		"`Computadora`.`campo2`" => "Campo 2",
+		"`Computadora`.`informacion1`" => "Informaci&#243;n 1",
+		"`Computadora`.`informacion2`" => "Informaci&#243;n 2",
 		"`Computadora`.`NombreComp`" => "Nombre Comp.",
 		"`Computadora`.`Antivirus`" => "Antivirus",
 		"`Computadora`.`TeamviewerID`" => "Teamviewer ID",
 		"`Computadora`.`Notas`" => "Notas",
+		"`Computadora`.`actualizado`" => "Actualizado",
 	);
 
 	// Fields that can be quick searched
@@ -93,14 +97,15 @@
 		"`Computadora`.`Marca`" => "Marca",
 		"`Computadora`.`Modelo`" => "Modelo",
 		"`Computadora`.`Serie`" => "Serie",
-		"`Computadora`.`Hedset`" => "Hedset",
+		"`Computadora`.`Headset`" => "Headset",
 		"`Computadora`.`Monitor`" => "Monitor",
-		"`Computadora`.`campo1`" => "campo1",
-		"`Computadora`.`campo2`" => "campo2",
+		"`Computadora`.`informacion1`" => "informacion1",
+		"`Computadora`.`informacion2`" => "informacion2",
 		"`Computadora`.`NombreComp`" => "NombreComp",
 		"`Computadora`.`Antivirus`" => "Antivirus",
 		"`Computadora`.`TeamviewerID`" => "TeamviewerID",
 		"`Computadora`.`Notas`" => "Notas",
+		"`Computadora`.`actualizado`" => "actualizado",
 	);
 
 	// Lookup fields that can be used as filterers
@@ -136,10 +141,10 @@
 	$x->DefaultSortField = '2';
 	$x->DefaultSortDirection = 'asc';
 
-	$x->ColWidth   = array(  150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150);
-	$x->ColCaption = array("Nombre Empleado", "Marca Comp.", "Comp. Modelo", "# Serie", "Headset", "Monitor Externo", "Campo 1", "Campo 2", "Nombre Comp.", "Antivirus", "Teamviewer ID", "Notas");
-	$x->ColFieldName = array('Empleado', 'Marca', 'Modelo', 'Serie', 'Hedset', 'Monitor', 'campo1', 'campo2', 'NombreComp', 'Antivirus', 'TeamviewerID', 'Notas');
-	$x->ColNumber  = array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+	$x->ColWidth   = array(  150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150);
+	$x->ColCaption = array("Nombre Empleado", "Marca Comp.", "Comp. Modelo", "# Serie", "Headset", "Monitor Externo", "Informaci&#243;n 1", "Informaci&#243;n 2", "Nombre Comp.", "Antivirus", "Teamviewer ID", "Notas", "Actualizado");
+	$x->ColFieldName = array('Empleado', 'Marca', 'Modelo', 'Serie', 'Headset', 'Monitor', 'informacion1', 'informacion2', 'NombreComp', 'Antivirus', 'TeamviewerID', 'Notas', 'actualizado');
+	$x->ColNumber  = array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14);
 
 	// template paths below are based on the app main directory
 	$x->Template = 'templates/Computadora_templateTV.html';

@@ -21,14 +21,14 @@ function Computadora_insert() {
 		if($data['Modelo'] == empty_lookup_value) { $data['Modelo'] = ''; }
 	$data['Serie'] = $_REQUEST['Serie'];
 		if($data['Serie'] == empty_lookup_value) { $data['Serie'] = ''; }
-	$data['Hedset'] = $_REQUEST['Hedset'];
-		if($data['Hedset'] == empty_lookup_value) { $data['Hedset'] = ''; }
+	$data['Headset'] = $_REQUEST['Headset'];
+		if($data['Headset'] == empty_lookup_value) { $data['Headset'] = ''; }
 	$data['Monitor'] = $_REQUEST['Monitor'];
 		if($data['Monitor'] == empty_lookup_value) { $data['Monitor'] = ''; }
-	$data['campo1'] = $_REQUEST['campo1'];
-		if($data['campo1'] == empty_lookup_value) { $data['campo1'] = ''; }
-	$data['campo2'] = $_REQUEST['campo2'];
-		if($data['campo2'] == empty_lookup_value) { $data['campo2'] = ''; }
+	$data['informacion1'] = $_REQUEST['informacion1'];
+		if($data['informacion1'] == empty_lookup_value) { $data['informacion1'] = ''; }
+	$data['informacion2'] = $_REQUEST['informacion2'];
+		if($data['informacion2'] == empty_lookup_value) { $data['informacion2'] = ''; }
 	$data['NombreComp'] = $_REQUEST['NombreComp'];
 		if($data['NombreComp'] == empty_lookup_value) { $data['NombreComp'] = ''; }
 	$data['Antivirus'] = $_REQUEST['Antivirus'];
@@ -168,14 +168,14 @@ function Computadora_update($selected_id) {
 		echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
 		exit;
 	}
-	$data['Hedset'] = makeSafe($_REQUEST['Hedset']);
-		if($data['Hedset'] == empty_lookup_value) { $data['Hedset'] = ''; }
+	$data['Headset'] = makeSafe($_REQUEST['Headset']);
+		if($data['Headset'] == empty_lookup_value) { $data['Headset'] = ''; }
 	$data['Monitor'] = makeSafe($_REQUEST['Monitor']);
 		if($data['Monitor'] == empty_lookup_value) { $data['Monitor'] = ''; }
-	$data['campo1'] = makeSafe($_REQUEST['campo1']);
-		if($data['campo1'] == empty_lookup_value) { $data['campo1'] = ''; }
-	$data['campo2'] = makeSafe($_REQUEST['campo2']);
-		if($data['campo2'] == empty_lookup_value) { $data['campo2'] = ''; }
+	$data['informacion1'] = makeSafe($_REQUEST['informacion1']);
+		if($data['informacion1'] == empty_lookup_value) { $data['informacion1'] = ''; }
+	$data['informacion2'] = makeSafe($_REQUEST['informacion2']);
+		if($data['informacion2'] == empty_lookup_value) { $data['informacion2'] = ''; }
 	$data['NombreComp'] = makeSafe($_REQUEST['NombreComp']);
 		if($data['NombreComp'] == empty_lookup_value) { $data['NombreComp'] = ''; }
 	$data['Antivirus'] = makeSafe($_REQUEST['Antivirus']);
@@ -183,6 +183,7 @@ function Computadora_update($selected_id) {
 	$data['TeamviewerID'] = makeSafe($_REQUEST['TeamviewerID']);
 		if($data['TeamviewerID'] == empty_lookup_value) { $data['TeamviewerID'] = ''; }
 	$data['Notas'] = br2nl(makeSafe($_REQUEST['Notas']));
+	$data['actualizado'] = parseCode('<%%editingDate%%>', false);
 	$data['selectedID'] = makeSafe($selected_id);
 
 	// hook: Computadora_before_update
@@ -192,7 +193,7 @@ function Computadora_update($selected_id) {
 	}
 
 	$o = array('silentErrors' => true);
-	sql('update `Computadora` set       `Empleado`=' . (($data['Empleado'] !== '' && $data['Empleado'] !== NULL) ? "'{$data['Empleado']}'" : 'NULL') . ', `Marca`=' . (($data['Marca'] !== '' && $data['Marca'] !== NULL) ? "'{$data['Marca']}'" : 'NULL') . ', `Modelo`=' . (($data['Modelo'] !== '' && $data['Modelo'] !== NULL) ? "'{$data['Modelo']}'" : 'NULL') . ', `Serie`=' . (($data['Serie'] !== '' && $data['Serie'] !== NULL) ? "'{$data['Serie']}'" : 'NULL') . ', `Hedset`=' . (($data['Hedset'] !== '' && $data['Hedset'] !== NULL) ? "'{$data['Hedset']}'" : 'NULL') . ', `Monitor`=' . (($data['Monitor'] !== '' && $data['Monitor'] !== NULL) ? "'{$data['Monitor']}'" : 'NULL') . ', `campo1`=' . (($data['campo1'] !== '' && $data['campo1'] !== NULL) ? "'{$data['campo1']}'" : 'NULL') . ', `campo2`=' . (($data['campo2'] !== '' && $data['campo2'] !== NULL) ? "'{$data['campo2']}'" : 'NULL') . ', `NombreComp`=' . (($data['NombreComp'] !== '' && $data['NombreComp'] !== NULL) ? "'{$data['NombreComp']}'" : 'NULL') . ', `Antivirus`=' . (($data['Antivirus'] !== '' && $data['Antivirus'] !== NULL) ? "'{$data['Antivirus']}'" : 'NULL') . ', `TeamviewerID`=' . (($data['TeamviewerID'] !== '' && $data['TeamviewerID'] !== NULL) ? "'{$data['TeamviewerID']}'" : 'NULL') . ', `Notas`=' . (($data['Notas'] !== '' && $data['Notas'] !== NULL) ? "'{$data['Notas']}'" : 'NULL') . " where `id`='".makeSafe($selected_id)."'", $o);
+	sql('update `Computadora` set       `Empleado`=' . (($data['Empleado'] !== '' && $data['Empleado'] !== NULL) ? "'{$data['Empleado']}'" : 'NULL') . ', `Marca`=' . (($data['Marca'] !== '' && $data['Marca'] !== NULL) ? "'{$data['Marca']}'" : 'NULL') . ', `Modelo`=' . (($data['Modelo'] !== '' && $data['Modelo'] !== NULL) ? "'{$data['Modelo']}'" : 'NULL') . ', `Serie`=' . (($data['Serie'] !== '' && $data['Serie'] !== NULL) ? "'{$data['Serie']}'" : 'NULL') . ', `Headset`=' . (($data['Headset'] !== '' && $data['Headset'] !== NULL) ? "'{$data['Headset']}'" : 'NULL') . ', `Monitor`=' . (($data['Monitor'] !== '' && $data['Monitor'] !== NULL) ? "'{$data['Monitor']}'" : 'NULL') . ', `informacion1`=' . (($data['informacion1'] !== '' && $data['informacion1'] !== NULL) ? "'{$data['informacion1']}'" : 'NULL') . ', `informacion2`=' . (($data['informacion2'] !== '' && $data['informacion2'] !== NULL) ? "'{$data['informacion2']}'" : 'NULL') . ', `NombreComp`=' . (($data['NombreComp'] !== '' && $data['NombreComp'] !== NULL) ? "'{$data['NombreComp']}'" : 'NULL') . ', `Antivirus`=' . (($data['Antivirus'] !== '' && $data['Antivirus'] !== NULL) ? "'{$data['Antivirus']}'" : 'NULL') . ', `TeamviewerID`=' . (($data['TeamviewerID'] !== '' && $data['TeamviewerID'] !== NULL) ? "'{$data['TeamviewerID']}'" : 'NULL') . ', `Notas`=' . (($data['Notas'] !== '' && $data['Notas'] !== NULL) ? "'{$data['Notas']}'" : 'NULL') . ', `actualizado`=' . "'{$data['actualizado']}'" . " where `id`='".makeSafe($selected_id)."'", $o);
 	if($o['error']!='') {
 		echo $o['error'];
 		echo '<a href="Computadora_view.php?SelectedID='.urlencode($selected_id)."\">{$Translation['< back']}</a>";
@@ -363,10 +364,10 @@ function Computadora_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1,
 		$jsReadOnly .= "\tjQuery('#Marca').replaceWith('<div class=\"form-control-static\" id=\"Marca\">' + (jQuery('#Marca').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#Modelo').replaceWith('<div class=\"form-control-static\" id=\"Modelo\">' + (jQuery('#Modelo').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#Serie').replaceWith('<div class=\"form-control-static\" id=\"Serie\">' + (jQuery('#Serie').val() || '') + '</div>');\n";
-		$jsReadOnly .= "\tjQuery('#Hedset').replaceWith('<div class=\"form-control-static\" id=\"Hedset\">' + (jQuery('#Hedset').val() || '') + '</div>');\n";
+		$jsReadOnly .= "\tjQuery('#Headset').replaceWith('<div class=\"form-control-static\" id=\"Headset\">' + (jQuery('#Headset').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#Monitor').replaceWith('<div class=\"form-control-static\" id=\"Monitor\">' + (jQuery('#Monitor').val() || '') + '</div>'); jQuery('#Monitor-multi-selection-help').hide();\n";
-		$jsReadOnly .= "\tjQuery('#campo1').replaceWith('<div class=\"form-control-static\" id=\"campo1\">' + (jQuery('#campo1').val() || '') + '</div>');\n";
-		$jsReadOnly .= "\tjQuery('#campo2').replaceWith('<div class=\"form-control-static\" id=\"campo2\">' + (jQuery('#campo2').val() || '') + '</div>');\n";
+		$jsReadOnly .= "\tjQuery('#informacion1').replaceWith('<div class=\"form-control-static\" id=\"informacion1\">' + (jQuery('#informacion1').val() || '') + '</div>');\n";
+		$jsReadOnly .= "\tjQuery('#informacion2').replaceWith('<div class=\"form-control-static\" id=\"informacion2\">' + (jQuery('#informacion2').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#NombreComp').replaceWith('<div class=\"form-control-static\" id=\"NombreComp\">' + (jQuery('#NombreComp').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#Antivirus').replaceWith('<div class=\"form-control-static\" id=\"Antivirus\">' + (jQuery('#Antivirus').val() || '') + '</div>'); jQuery('#Antivirus-multi-selection-help').hide();\n";
 		$jsReadOnly .= "\tjQuery('#TeamviewerID').replaceWith('<div class=\"form-control-static\" id=\"TeamviewerID\">' + (jQuery('#TeamviewerID').val() || '') + '</div>');\n";
@@ -407,14 +408,15 @@ function Computadora_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1,
 	$templateCode = str_replace('<%%UPLOADFILE(Marca)%%>', '', $templateCode);
 	$templateCode = str_replace('<%%UPLOADFILE(Modelo)%%>', '', $templateCode);
 	$templateCode = str_replace('<%%UPLOADFILE(Serie)%%>', '', $templateCode);
-	$templateCode = str_replace('<%%UPLOADFILE(Hedset)%%>', '', $templateCode);
+	$templateCode = str_replace('<%%UPLOADFILE(Headset)%%>', '', $templateCode);
 	$templateCode = str_replace('<%%UPLOADFILE(Monitor)%%>', '', $templateCode);
-	$templateCode = str_replace('<%%UPLOADFILE(campo1)%%>', '', $templateCode);
-	$templateCode = str_replace('<%%UPLOADFILE(campo2)%%>', '', $templateCode);
+	$templateCode = str_replace('<%%UPLOADFILE(informacion1)%%>', '', $templateCode);
+	$templateCode = str_replace('<%%UPLOADFILE(informacion2)%%>', '', $templateCode);
 	$templateCode = str_replace('<%%UPLOADFILE(NombreComp)%%>', '', $templateCode);
 	$templateCode = str_replace('<%%UPLOADFILE(Antivirus)%%>', '', $templateCode);
 	$templateCode = str_replace('<%%UPLOADFILE(TeamviewerID)%%>', '', $templateCode);
 	$templateCode = str_replace('<%%UPLOADFILE(Notas)%%>', '', $templateCode);
+	$templateCode = str_replace('<%%UPLOADFILE(actualizado)%%>', '', $templateCode);
 
 	// process values
 	if($selected_id) {
@@ -433,18 +435,18 @@ function Computadora_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1,
 		if( $dvprint) $templateCode = str_replace('<%%VALUE(Serie)%%>', safe_html($urow['Serie']), $templateCode);
 		if(!$dvprint) $templateCode = str_replace('<%%VALUE(Serie)%%>', html_attr($row['Serie']), $templateCode);
 		$templateCode = str_replace('<%%URLVALUE(Serie)%%>', urlencode($urow['Serie']), $templateCode);
-		if( $dvprint) $templateCode = str_replace('<%%VALUE(Hedset)%%>', safe_html($urow['Hedset']), $templateCode);
-		if(!$dvprint) $templateCode = str_replace('<%%VALUE(Hedset)%%>', html_attr($row['Hedset']), $templateCode);
-		$templateCode = str_replace('<%%URLVALUE(Hedset)%%>', urlencode($urow['Hedset']), $templateCode);
+		if( $dvprint) $templateCode = str_replace('<%%VALUE(Headset)%%>', safe_html($urow['Headset']), $templateCode);
+		if(!$dvprint) $templateCode = str_replace('<%%VALUE(Headset)%%>', html_attr($row['Headset']), $templateCode);
+		$templateCode = str_replace('<%%URLVALUE(Headset)%%>', urlencode($urow['Headset']), $templateCode);
 		if( $dvprint) $templateCode = str_replace('<%%VALUE(Monitor)%%>', safe_html($urow['Monitor']), $templateCode);
 		if(!$dvprint) $templateCode = str_replace('<%%VALUE(Monitor)%%>', html_attr($row['Monitor']), $templateCode);
 		$templateCode = str_replace('<%%URLVALUE(Monitor)%%>', urlencode($urow['Monitor']), $templateCode);
-		if( $dvprint) $templateCode = str_replace('<%%VALUE(campo1)%%>', safe_html($urow['campo1']), $templateCode);
-		if(!$dvprint) $templateCode = str_replace('<%%VALUE(campo1)%%>', html_attr($row['campo1']), $templateCode);
-		$templateCode = str_replace('<%%URLVALUE(campo1)%%>', urlencode($urow['campo1']), $templateCode);
-		if( $dvprint) $templateCode = str_replace('<%%VALUE(campo2)%%>', safe_html($urow['campo2']), $templateCode);
-		if(!$dvprint) $templateCode = str_replace('<%%VALUE(campo2)%%>', html_attr($row['campo2']), $templateCode);
-		$templateCode = str_replace('<%%URLVALUE(campo2)%%>', urlencode($urow['campo2']), $templateCode);
+		if( $dvprint) $templateCode = str_replace('<%%VALUE(informacion1)%%>', safe_html($urow['informacion1']), $templateCode);
+		if(!$dvprint) $templateCode = str_replace('<%%VALUE(informacion1)%%>', html_attr($row['informacion1']), $templateCode);
+		$templateCode = str_replace('<%%URLVALUE(informacion1)%%>', urlencode($urow['informacion1']), $templateCode);
+		if( $dvprint) $templateCode = str_replace('<%%VALUE(informacion2)%%>', safe_html($urow['informacion2']), $templateCode);
+		if(!$dvprint) $templateCode = str_replace('<%%VALUE(informacion2)%%>', html_attr($row['informacion2']), $templateCode);
+		$templateCode = str_replace('<%%URLVALUE(informacion2)%%>', urlencode($urow['informacion2']), $templateCode);
 		if( $dvprint) $templateCode = str_replace('<%%VALUE(NombreComp)%%>', safe_html($urow['NombreComp']), $templateCode);
 		if(!$dvprint) $templateCode = str_replace('<%%VALUE(NombreComp)%%>', html_attr($row['NombreComp']), $templateCode);
 		$templateCode = str_replace('<%%URLVALUE(NombreComp)%%>', urlencode($urow['NombreComp']), $templateCode);
@@ -460,6 +462,8 @@ function Computadora_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1,
 			$templateCode = str_replace('<%%VALUE(Notas)%%>', html_attr($row['Notas']), $templateCode);
 		}
 		$templateCode = str_replace('<%%URLVALUE(Notas)%%>', urlencode($urow['Notas']), $templateCode);
+		$templateCode = str_replace('<%%VALUE(actualizado)%%>', safe_html($urow['actualizado']), $templateCode);
+		$templateCode = str_replace('<%%URLVALUE(actualizado)%%>', urlencode($urow['actualizado']), $templateCode);
 	}else{
 		$templateCode = str_replace('<%%VALUE(id)%%>', '', $templateCode);
 		$templateCode = str_replace('<%%URLVALUE(id)%%>', urlencode(''), $templateCode);
@@ -471,14 +475,14 @@ function Computadora_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1,
 		$templateCode = str_replace('<%%URLVALUE(Modelo)%%>', urlencode(''), $templateCode);
 		$templateCode = str_replace('<%%VALUE(Serie)%%>', '', $templateCode);
 		$templateCode = str_replace('<%%URLVALUE(Serie)%%>', urlencode(''), $templateCode);
-		$templateCode = str_replace('<%%VALUE(Hedset)%%>', '', $templateCode);
-		$templateCode = str_replace('<%%URLVALUE(Hedset)%%>', urlencode(''), $templateCode);
+		$templateCode = str_replace('<%%VALUE(Headset)%%>', '', $templateCode);
+		$templateCode = str_replace('<%%URLVALUE(Headset)%%>', urlencode(''), $templateCode);
 		$templateCode = str_replace('<%%VALUE(Monitor)%%>', '', $templateCode);
 		$templateCode = str_replace('<%%URLVALUE(Monitor)%%>', urlencode(''), $templateCode);
-		$templateCode = str_replace('<%%VALUE(campo1)%%>', '', $templateCode);
-		$templateCode = str_replace('<%%URLVALUE(campo1)%%>', urlencode(''), $templateCode);
-		$templateCode = str_replace('<%%VALUE(campo2)%%>', '', $templateCode);
-		$templateCode = str_replace('<%%URLVALUE(campo2)%%>', urlencode(''), $templateCode);
+		$templateCode = str_replace('<%%VALUE(informacion1)%%>', '', $templateCode);
+		$templateCode = str_replace('<%%URLVALUE(informacion1)%%>', urlencode(''), $templateCode);
+		$templateCode = str_replace('<%%VALUE(informacion2)%%>', '', $templateCode);
+		$templateCode = str_replace('<%%URLVALUE(informacion2)%%>', urlencode(''), $templateCode);
 		$templateCode = str_replace('<%%VALUE(NombreComp)%%>', '', $templateCode);
 		$templateCode = str_replace('<%%URLVALUE(NombreComp)%%>', urlencode(''), $templateCode);
 		$templateCode = str_replace('<%%VALUE(Antivirus)%%>', '', $templateCode);
@@ -487,6 +491,8 @@ function Computadora_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1,
 		$templateCode = str_replace('<%%URLVALUE(TeamviewerID)%%>', urlencode(''), $templateCode);
 		$templateCode = str_replace('<%%VALUE(Notas)%%>', '', $templateCode);
 		$templateCode = str_replace('<%%URLVALUE(Notas)%%>', urlencode(''), $templateCode);
+		$templateCode = str_replace('<%%VALUE(actualizado)%%>', '<%%editingDate%%>', $templateCode);
+		$templateCode = str_replace('<%%URLVALUE(actualizado)%%>', urlencode('<%%editingDate%%>'), $templateCode);
 	}
 
 	// process translations

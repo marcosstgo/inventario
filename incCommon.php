@@ -132,7 +132,7 @@
 
 	function get_sql_fields($table_name) {
 		$sql_fields = array(
-			'Computadora' => "`Computadora`.`id` as 'id', `Computadora`.`Empleado` as 'Empleado', `Computadora`.`Marca` as 'Marca', `Computadora`.`Modelo` as 'Modelo', `Computadora`.`Serie` as 'Serie', `Computadora`.`Hedset` as 'Hedset', `Computadora`.`Monitor` as 'Monitor', `Computadora`.`campo1` as 'campo1', `Computadora`.`campo2` as 'campo2', `Computadora`.`NombreComp` as 'NombreComp', `Computadora`.`Antivirus` as 'Antivirus', `Computadora`.`TeamviewerID` as 'TeamviewerID', `Computadora`.`Notas` as 'Notas'",
+			'Computadora' => "`Computadora`.`id` as 'id', `Computadora`.`Empleado` as 'Empleado', `Computadora`.`Marca` as 'Marca', `Computadora`.`Modelo` as 'Modelo', `Computadora`.`Serie` as 'Serie', `Computadora`.`Headset` as 'Headset', `Computadora`.`Monitor` as 'Monitor', `Computadora`.`informacion1` as 'informacion1', `Computadora`.`informacion2` as 'informacion2', `Computadora`.`NombreComp` as 'NombreComp', `Computadora`.`Antivirus` as 'Antivirus', `Computadora`.`TeamviewerID` as 'TeamviewerID', `Computadora`.`Notas` as 'Notas', `Computadora`.`actualizado` as 'actualizado'",
 		);
 
 		if(isset($sql_fields[$table_name])) {
@@ -205,14 +205,15 @@
 				'Marca' => '',
 				'Modelo' => '',
 				'Serie' => '',
-				'Hedset' => '',
+				'Headset' => '',
 				'Monitor' => '',
-				'campo1' => '',
-				'campo2' => '',
+				'informacion1' => '',
+				'informacion2' => '',
 				'NombreComp' => '',
 				'Antivirus' => '',
 				'TeamviewerID' => '',
-				'Notas' => ''
+				'Notas' => '',
+				'actualizado' => ''
 			)
 		);
 
