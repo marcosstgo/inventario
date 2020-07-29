@@ -10,7 +10,7 @@
 
 	/* application schema as created in AppGini */
 	$schema = array(
-		'Inventario' => array(
+		'Computadora' => array(
 			'id' => array('appgini' => 'INT unsigned not null primary key auto_increment '),
 			'Empleado' => array('appgini' => 'VARCHAR(255) not null '),
 			'Marca' => array('appgini' => 'VARCHAR(255) not null '),

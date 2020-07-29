@@ -14,7 +14,7 @@
 		<title>Inventario | <?php echo (isset($x->TableTitle) ? $x->TableTitle : ''); ?></title>
 		<link id="browser_favicon" rel="shortcut icon" href="<?php echo PREPEND_PATH; ?>resources/images/appgini-icon.png">
 
-		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/initializr/css/yeti.css">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/initializr/css/simplex.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/lightbox/css/lightbox.css" media="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/select2/select2.css" media="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/timepicker/bootstrap-timepicker.min.css" media="screen">
@@ -43,7 +43,7 @@
 
 	</head>
 	<body>
-		<div class="users-area container theme-yeti">
+		<div class="users-area container theme-simplex theme-compact">
 			<?php if(function_exists('handle_maintenance')) echo handle_maintenance(true); ?>
 
 			<?php if(!$_REQUEST['Embedded']) { ?>

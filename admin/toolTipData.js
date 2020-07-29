@@ -11,23 +11,23 @@ visitorSignup0Tip=["", spacer+"If this option is selected, visitors will not be 
 visitorSignup1Tip=["", spacer+"If this option is selected, visitors can join this group but will not be able to sign in unless the admin approves them from the admin area."];
 visitorSignup2Tip=["", spacer+"If this option is selected, visitors can join this group and will be able to sign in instantly with no need for admin approval."];
 
-// Inventario table
-Inventario_addTip=["",spacer+"This option allows all members of the group to add records to the 'Computadoras' table. A member who adds a record to the table becomes the 'owner' of that record."];
+// Computadora table
+Computadora_addTip=["",spacer+"This option allows all members of the group to add records to the 'Computadoras' table. A member who adds a record to the table becomes the 'owner' of that record."];
 
-Inventario_view0Tip=["",spacer+"This option prohibits all members of the group from viewing any record in the 'Computadoras' table."];
-Inventario_view1Tip=["",spacer+"This option allows each member of the group to view only his own records in the 'Computadoras' table."];
-Inventario_view2Tip=["",spacer+"This option allows each member of the group to view any record owned by any member of the group in the 'Computadoras' table."];
-Inventario_view3Tip=["",spacer+"This option allows each member of the group to view all records in the 'Computadoras' table."];
+Computadora_view0Tip=["",spacer+"This option prohibits all members of the group from viewing any record in the 'Computadoras' table."];
+Computadora_view1Tip=["",spacer+"This option allows each member of the group to view only his own records in the 'Computadoras' table."];
+Computadora_view2Tip=["",spacer+"This option allows each member of the group to view any record owned by any member of the group in the 'Computadoras' table."];
+Computadora_view3Tip=["",spacer+"This option allows each member of the group to view all records in the 'Computadoras' table."];
 
-Inventario_edit0Tip=["",spacer+"This option prohibits all members of the group from modifying any record in the 'Computadoras' table."];
-Inventario_edit1Tip=["",spacer+"This option allows each member of the group to edit only his own records in the 'Computadoras' table."];
-Inventario_edit2Tip=["",spacer+"This option allows each member of the group to edit any record owned by any member of the group in the 'Computadoras' table."];
-Inventario_edit3Tip=["",spacer+"This option allows each member of the group to edit any records in the 'Computadoras' table, regardless of their owner."];
+Computadora_edit0Tip=["",spacer+"This option prohibits all members of the group from modifying any record in the 'Computadoras' table."];
+Computadora_edit1Tip=["",spacer+"This option allows each member of the group to edit only his own records in the 'Computadoras' table."];
+Computadora_edit2Tip=["",spacer+"This option allows each member of the group to edit any record owned by any member of the group in the 'Computadoras' table."];
+Computadora_edit3Tip=["",spacer+"This option allows each member of the group to edit any records in the 'Computadoras' table, regardless of their owner."];
 
-Inventario_delete0Tip=["",spacer+"This option prohibits all members of the group from deleting any record in the 'Computadoras' table."];
-Inventario_delete1Tip=["",spacer+"This option allows each member of the group to delete only his own records in the 'Computadoras' table."];
-Inventario_delete2Tip=["",spacer+"This option allows each member of the group to delete any record owned by any member of the group in the 'Computadoras' table."];
-Inventario_delete3Tip=["",spacer+"This option allows each member of the group to delete any records in the 'Computadoras' table."];
+Computadora_delete0Tip=["",spacer+"This option prohibits all members of the group from deleting any record in the 'Computadoras' table."];
+Computadora_delete1Tip=["",spacer+"This option allows each member of the group to delete only his own records in the 'Computadoras' table."];
+Computadora_delete2Tip=["",spacer+"This option allows each member of the group to delete any record owned by any member of the group in the 'Computadoras' table."];
+Computadora_delete3Tip=["",spacer+"This option allows each member of the group to delete any records in the 'Computadoras' table."];
 
 /*
 	Style syntax:

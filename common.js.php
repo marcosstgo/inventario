@@ -320,7 +320,7 @@ AppGini.ajaxCache = function() {
 	};
 };
 
-function Inventario_validateData() {
+function Computadora_validateData() {
 	$j('.has-error').removeClass('has-error');
 	/* Field Empleado can't be empty */
 	if($j('#Empleado').val() == ''){ modal_window({ message: '<div class="alert alert-danger"><?php echo addslashes($Translation['field not null']); ?></div>', title: "<?php echo addslashes($Translation['error:']); ?> Nombre Empleado", close: function() { /* */ $j('[name=Empleado]').eq(0).focus().parents('.form-group').addClass('has-error'); }, footer: [{ label: '<?php echo addslashes($Translation['ok']); ?>' }] }); return false; };

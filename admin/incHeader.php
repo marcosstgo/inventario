@@ -13,7 +13,7 @@
 
 		<link id="browser_favicon" rel="shortcut icon" href="<?php echo PREPEND_PATH; ?>resources/table_icons/administrator.png">
 
-		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/initializr/css/yeti.css">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/initializr/css/simplex.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>dynamic.css.php">
 
 		<!--[if lt IE 9]>
@@ -161,7 +161,7 @@
 		</style>
 	</head>
 	<body>
-	<div class="admin-area container theme-yeti">
+	<div class="admin-area container theme-simplex theme-compact">
 
 		<!-- top navbar -->
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

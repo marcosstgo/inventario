@@ -11,7 +11,7 @@
 		}
 
 		// set up tables
-		setupTable('Inventario', "create table if not exists `Inventario` (   `id` INT unsigned not null auto_increment , primary key (`id`), `Empleado` VARCHAR(255) not null , `Marca` VARCHAR(255) not null , `Modelo` VARCHAR(255) null , `Serie` VARCHAR(255) not null , `Hedset` VARCHAR(255) null , `Monitor` VARCHAR(255) null , `campo1` VARCHAR(255) null , `campo2` VARCHAR(255) null , `NombreComp` VARCHAR(255) null , `Antivirus` VARCHAR(255) null , `TeamviewerID` INT null , `Notas` LONGTEXT null ) CHARSET utf8", $silent);
+		setupTable('Computadora', "create table if not exists `Computadora` (   `id` INT unsigned not null auto_increment , primary key (`id`), `Empleado` VARCHAR(255) not null , `Marca` VARCHAR(255) not null , `Modelo` VARCHAR(255) null , `Serie` VARCHAR(255) not null , `Hedset` VARCHAR(255) null , `Monitor` VARCHAR(255) null , `campo1` VARCHAR(255) null , `campo2` VARCHAR(255) null , `NombreComp` VARCHAR(255) null , `Antivirus` VARCHAR(255) null , `TeamviewerID` INT null , `Notas` LONGTEXT null ) CHARSET utf8", $silent, array( "ALTER TABLE `Inventario` RENAME `Computadora`","UPDATE `membership_userrecords` SET `tableName`='Computadora' where `tableName`='Inventario'","UPDATE `membership_userpermissions` SET `tableName`='Computadora' where `tableName`='Inventario'","UPDATE `membership_grouppermissions` SET `tableName`='Computadora' where `tableName`='Inventario'"));
 
 
 		// save MD5

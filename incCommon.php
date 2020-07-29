@@ -45,7 +45,7 @@
 		$arrAccessTables = array();
 		$arrTables = array(
 			/* 'table_name' => ['table caption', 'homepage description', 'icon', 'table group name'] */   
-			'Inventario' => array('Computadoras', '', 'resources/table_icons/laptop.png', 'None')
+			'Computadora' => array('Computadoras', '', 'resources/table_icons/laptop.png', 'None')
 		);
 		if($skip_authentication || getLoggedAdmin()) return $arrTables;
 
@@ -132,7 +132,7 @@
 
 	function get_sql_fields($table_name) {
 		$sql_fields = array(
-			'Inventario' => "`Inventario`.`id` as 'id', `Inventario`.`Empleado` as 'Empleado', `Inventario`.`Marca` as 'Marca', `Inventario`.`Modelo` as 'Modelo', `Inventario`.`Serie` as 'Serie', `Inventario`.`Hedset` as 'Hedset', `Inventario`.`Monitor` as 'Monitor', `Inventario`.`campo1` as 'campo1', `Inventario`.`campo2` as 'campo2', `Inventario`.`NombreComp` as 'NombreComp', `Inventario`.`Antivirus` as 'Antivirus', `Inventario`.`TeamviewerID` as 'TeamviewerID', `Inventario`.`Notas` as 'Notas'",
+			'Computadora' => "`Computadora`.`id` as 'id', `Computadora`.`Empleado` as 'Empleado', `Computadora`.`Marca` as 'Marca', `Computadora`.`Modelo` as 'Modelo', `Computadora`.`Serie` as 'Serie', `Computadora`.`Hedset` as 'Hedset', `Computadora`.`Monitor` as 'Monitor', `Computadora`.`campo1` as 'campo1', `Computadora`.`campo2` as 'campo2', `Computadora`.`NombreComp` as 'NombreComp', `Computadora`.`Antivirus` as 'Antivirus', `Computadora`.`TeamviewerID` as 'TeamviewerID', `Computadora`.`Notas` as 'Notas'",
 		);
 
 		if(isset($sql_fields[$table_name])) {
@@ -146,11 +146,11 @@
 
 	function get_sql_from($table_name, $skip_permissions = false, $skip_joins = false) {
 		$sql_from = array(
-			'Inventario' => "`Inventario` ",
+			'Computadora' => "`Computadora` ",
 		);
 
 		$pkey = array(
-			'Inventario' => 'id',
+			'Computadora' => 'id',
 		);
 
 		if(!isset($sql_from[$table_name])) return false;
@@ -199,7 +199,7 @@
 	function get_defaults($table) {
 		/* array of tables and their fields, with default values (or empty), excluding automatic values */
 		$defaults = array(
-			'Inventario' => array(
+			'Computadora' => array(
 				'id' => '',
 				'Empleado' => '',
 				'Marca' => '',
@@ -1005,7 +1005,7 @@ EOT;
 
 		$css_links = <<<EOT
 
-			<link rel="stylesheet" href="{$prepend_path}resources/initializr/css/yeti.css">
+			<link rel="stylesheet" href="{$prepend_path}resources/initializr/css/simplex.css">
 			<link rel="stylesheet" href="{$prepend_path}resources/lightbox/css/lightbox.css" media="screen">
 			<link rel="stylesheet" href="{$prepend_path}resources/select2/select2.css" media="screen">
 			<link rel="stylesheet" href="{$prepend_path}resources/timepicker/bootstrap-timepicker.min.css" media="screen">

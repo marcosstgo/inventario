@@ -33,7 +33,7 @@
 
 	// drop-downs config
 	$lookups = array(
-		'Inventario' => array(
+		'Computadora' => array(
 		),
 	);
 

@@ -89,7 +89,7 @@
 
 		$all_tables = array(
 			/* ['table_name' => [table props assoc array] */   
-				'Inventario' => array(
+				'Computadora' => array(
 					'Caption' => 'Computadoras',
 					'Description' => '',
 					'tableIcon' => 'resources/table_icons/laptop.png',
@@ -111,7 +111,7 @@
 	if(!function_exists('getTableList')) {
 		function getTableList($skip_authentication = false) {
 			$arrTables = array(
-				'Inventario' => 'Computadoras',
+				'Computadora' => 'Computadoras',
 			);
 
 			return $arrTables;
@@ -1897,7 +1897,7 @@
 		 *             field => query, ...
 		 */
 		return array(
-			'Inventario' => array(
+			'Computadora' => array(
 			),
 		);
 	}

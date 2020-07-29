@@ -6,7 +6,7 @@
 	/*************************************/
 
 		$pcConfig = array(
-			'Inventario' => array(
+			'Computadora' => array(
 			),
 		);
 
